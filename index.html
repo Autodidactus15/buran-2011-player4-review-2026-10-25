@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#153554">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Разбор игры №4 «Бурана»: видеоклипы, наблюдения по всем периодам и расчёт игрового времени.">
+  <title>№4 · Разбор матча «Буран» — СК «Брянск»</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header">
+    <a class="brand" href="#main" aria-label="Разбор №4, начало страницы"><span class="jersey" aria-hidden="true">4</span><span>Игра под разбором</span></a>
+    <nav aria-label="Разделы страницы">
+      <a href="#clips">Клипы</a><a href="#report">Разбор</a><a href="#episodes">Эпизоды</a><a href="#ice-time">Время на льду</a>
+    </nav>
+    <button class="share-button" id="share" type="button">Поделиться</button>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-copy">
+        <p class="match-context">«Буран» 2011 <span>4:1</span> СК «Брянск» 2011</p>
+        <p class="match-date">25 октября 2026 года</p>
+        <h1 id="title">Как сыграл<br> номер <span class="number">4</span></h1>
+        <p class="hero-description">Вся игра по эпизодам: открывания, броски, возвраты и ошибки. С записью рядом с каждым выводом.</p>
+        <a class="primary-button" href="#clips">Смотреть видеопримеры</a>
+      </div>
+      <figure class="featured-video">
+        <video controls playsinline preload="metadata" poster="assets/posters/01-central-shot.jpg" aria-label="Открывание №4 и бросок из центра, 25:15–25:22 исходной записи">
+          <source src="assets/mobile/01-central-shot.mp4" type="video/mp4">
+          Ваш браузер не поддерживает встроенное видео. <a href="assets/01-central-shot.mp4">Открыть клип</a>.
+        </video>
+        <figcaption><span class="video-time">25:15–25:22</span><span>Открывание вторым темпом и бросок из центра</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="overview" aria-label="Основные данные разбора">
+      <div><strong>1 + 1</strong><span>гол и передача по протоколу</span></div>
+      <div><strong>≈29:20</strong><span>оценка чистого игрового времени</span></div>
+      <div><strong>125 эпизодов</strong><span>три периода, подробная хронология</span></div>
+    </section>
+    <p class="time-note">Время рассчитано вручную. Рабочий диапазон <strong>27:54–30:50</strong>, строго прослеженная часть <strong>26:14</strong>. Восстановление участков вне кадра описано в <a href="#ice-time">журнале времени</a>.</p>
+
+    <section id="clips" class="section" aria-labelledby="clips-heading">
+      <div class="section-heading"><div><h2 id="clips-heading">Действия, которые стоит пересмотреть</h2><p>Удачные решения и моменты для работы. Клипы без звука, в обычном темпе. Для телефона — компактные копии; полные MP4 можно скачать.</p></div><span class="section-count">9 клипов</span></div>
+      <div class="clip-grid" id="clip-grid"><p class="loading">Загружаем видеопримеры…</p></div>
+    </section>
+
+    <section id="report" class="section report-section" aria-labelledby="report-heading">
+      <div class="section-heading"><div><h2 id="report-heading">Полный разбор</h2><p>Фактическая роль, сильные стороны, ошибки и приоритеты для следующего просмотра.</p></div></div>
+      <article class="prose" id="report-body"><p class="loading">Загружаем текст разбора…</p></article>
+    </section>
+
+    <section id="episodes" class="section episodes-section" aria-labelledby="episodes-heading">
+      <div class="section-heading"><div><h2 id="episodes-heading">Каждый эпизод с доказательствами</h2><p>Таймкоды относятся к исходному видео. Откройте эпизод, чтобы увидеть подробности и кадры.</p></div><span class="section-count">125 эпизодов</span></div>
+      <form class="filters" id="filters" role="search">
+        <div class="filter-field"><label for="period">Период</label><select id="period" name="period"><option value="all">Все периоды</option><option value="1">Первый</option><option value="2">Второй</option><option value="3">Третий</option></select></div>
+        <div class="filter-field"><label for="evaluation">Тип действия</label><select id="evaluation" name="type"><option value="all">Все действия</option><option value="positive">Положительные</option><option value="negative">Отрицательные</option><option value="mixed">Смешанные</option><option value="neutral">Наблюдения</option></select></div>
+        <div class="filter-field search-field"><label for="search">Поиск по эпизодам</label><input id="search" name="q" type="search" autocomplete="off" placeholder="Например, бросок или подбор…"></div>
+        <button class="text-button" id="reset-filters" type="reset">Сбросить</button>
+      </form>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div id="event-list" class="event-list"></div>
+      <button class="secondary-button load-more" id="load-more" type="button" hidden>Показать ещё 20 эпизодов</button>
+    </section>
+
+    <section id="ice-time" class="section" aria-labelledby="ice-heading">
+      <div class="section-heading"><div><h2 id="ice-heading">Сколько времени провёл на льду</h2><p>Считаем игровые отрезки. Паузы, повторы и длинный перерыв исключены.</p></div></div>
+      <div class="table-wrap time-summary"><table><caption class="sr-only">Ручная оценка игрового времени №4 по периодам</caption><thead><tr><th scope="col">Период</th><th scope="col">Ориентир</th><th scope="col">Рабочий диапазон</th><th scope="col">Прослеженная часть</th></tr></thead><tbody id="time-table"></tbody></table></div>
+      <p class="time-explanation">Во втором периоде нижний восстановленный сценарий на 100 секунд больше суммы строго прослеженных отрезков. Он предполагает продолжение выхода, когда камера теряет игрока. Возможную скрытую замену полностью исключить нельзя. Диапазон условный и не является официальным хронометражем.</p>
+      <details class="ledger"><summary>Открыть полный журнал 25 блоков выхода</summary><div class="prose" id="ice-body"></div></details>
+      <div class="downloads"><a href="assets/ice-time.csv" download>Скачать время по выходам · CSV</a><a href="assets/events.csv" download>Скачать все эпизоды · CSV</a></div>
+    </section>
+
+    <section class="section final-assessment" id="rating" aria-label="Итоговая оценка за матч"><div id="rating-body" class="prose"></div><div class="score" aria-label="Итоговая оценка 7,5 из 10"><strong>7,5<span>/10</span></strong><p>за этот матч</p></div></section>
+  </main>
+  <footer><p>Разбор по предоставленной записи. Оценка субъективная, неопределённость отмечена рядом с выводами.</p><a href="https://cfo.fhr.ru/games/26429398/" target="_blank" rel="noopener noreferrer">Протокол ФХР</a><a href="#main">К началу</a></footer>
+  <div id="notice" class="notice" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">Для фильтров и полного текста включите JavaScript. <a href="report.html">Открыть текст разбора</a> · <a href="ice-time.html">Открыть журнал времени</a></p></noscript>
+</body>
+</html>
