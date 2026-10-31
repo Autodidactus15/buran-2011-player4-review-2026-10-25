@@ -2,3 +2,4 @@
 *.mp4 binary
 *.jpg binary
 line/*.csv text eol=lf
+match-2026-10-31/*.csv text eol=lf
