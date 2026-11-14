@@ -3,3 +3,4 @@
 *.jpg binary
 line/*.csv text eol=lf
 match-2026-10-31/*.csv text eol=lf
+match-rt-31a5c2b0/*.csv text eol=lf
